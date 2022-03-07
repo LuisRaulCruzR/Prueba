@@ -10,5 +10,15 @@ public class ApplicationController {
 	public String goHome(){
 		return	"Index";
 	}
+	
+	@GetMapping("/login")
+	public String login(){
+		return	"Index";
+	}
+	
+	@GetMapping("/logout")
+	public String logout(){
+		return	"Index";
+	}
 
 }
