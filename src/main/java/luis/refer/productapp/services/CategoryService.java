@@ -1,6 +1,7 @@
 package luis.refer.productapp.services;
 
 import java.util.List;
+import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -24,7 +25,8 @@ public class CategoryService {
 		categoryRepository.save(category);
 	}
 	
-	public Category findById(int id) {		
+	//get by Id
+	public Optional<Category> findById(int id) {		
 		return categoryRepository.findById(id);
 	}
 
