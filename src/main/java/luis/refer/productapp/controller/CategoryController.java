@@ -47,4 +47,10 @@ public class CategoryController {
 		categoryService.save(category);
 		return "redirect:/categories";		
 	}
+	
+	@RequestMapping(value="/categories/delete", method= {RequestMethod.DELETE, RequestMethod.GET})
+	public String delete(Integer id) {
+		categoryService.delete(id);
+		return "redirect:/categories";		
+	}
 }

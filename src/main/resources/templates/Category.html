@@ -374,6 +374,7 @@
                     <td>
                     	<div class="btn-group">
                     		<a th:href="@{/categories/findById/(id=${category.id})}" class="btn btn-primary" id="editButton">Edit</a >
+                    		<a th:href="@{/categories/delete/(id=${category.id})}" class="btn btn-danger" id="deleteButton">Delete</a >
                     	</div>
                     </td>
                   </tr>
@@ -480,6 +481,26 @@
 	      </div>
 	      <div class="modal-footer">
 	        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+	      </div>
+	    </div>
+	  </div>
+	</div>
+  
+	<div class="modal" id="deleteModal" tabindex="-1" role="dialog">
+	  <div class="modal-dialog" role="document">
+	    <div class="modal-content">
+	      <div class="modal-header">
+	        <h5 class="modal-title">Corfirmar Eliminacion</h5>
+	        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+	          <span aria-hidden="true">&times;</span>
+	        </button>
+	      </div>
+	      <div class="modal-body">
+	        <p>¿Esta seguro que desea eliminar esta fila?.</p>
+	      </div>
+	      <div class="modal-footer">
+	        <a type="button" id="confirmDeletButton" >Si, eliminar</a>
+	        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
 	      </div>
 	    </div>
 	  </div>
