@@ -362,6 +362,7 @@
                     <th>Descripcion</th>
                     <th>Detalle</th>
                     <th>Categoria</th>
+                    <th>Actions</th>
                   </tr>
                 </thead>
                 <tbody>
@@ -372,7 +373,7 @@
                     <td th:text="${category.categoria}"></td>
                     <td>
                     	<div class="btn-group">
-                    		<a class="btn btn-primary" id="editButton">Edit</a>
+                    		<a th:href="@{/categories/findById/(id=${category.id})}" class="btn btn-primary" id="editButton">Edit</a >
                     	</div>
                     </td>
                   </tr>
@@ -450,7 +451,12 @@
 	        </button>
 	      </div>
 	      <div class="modal-body">
-	        <form th:action="@{/categories/addNew}" method="POST">
+	        <form th:action="@{/categories/update}" method="put">
+	        <div class="form-group">
+	            <label for="recipient-name" class="col-form-label">Descripcion:</label>
+	            <input type="text" class="form-control" id="idEdit" name="id" readonly>
+	          </div>
+	        
 	          <div class="form-group">
 	            <label for="recipient-name" class="col-form-label">Descripcion:</label>
 	            <input type="text" class="form-control" id="descripcionEdit" name="descripcion">
